@@ -38,10 +38,9 @@ public class ModBlocks {
      */
     public static final RegistryObject<Block> TECH_WORKBENCH =
         registerBlock("tech_workbench",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.IRON_BLOCK)
                 .sound(SoundType.METAL)
-                .strength(5.0f, 6.0f)
-                .requiresCorrectToolForDrops()
+                .strength(5.0f)
             )
         );
 

@@ -37,9 +37,8 @@ public class ModCreativeTabs {
                 .withTabsBefore(Registries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTab.TAB_SEARCH))
                 .icon(() -> new ItemStack(ModItems.NANO_SUIT.get()))
                 .displayItems((features, output) -> {
-                    // Add all mod items to the creative tab
-                    output.accept(ModItems.NANO_SUIT.get());
-                    output.accept(ModItems.NANO_GAUNTLETS.get());
+                    // Automatically add all items from ModItems registry
+                    ModItems.ITEMS.getEntries().forEach(item -> output.accept(item.get()));
                 })
                 .build()
         );
