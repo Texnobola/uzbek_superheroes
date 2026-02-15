@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[47,)" # Forge 1.20.1 uchun standart
+
+license="All Rights Reserved" # Yoki "MIT" agar ochiq kodli qilmoqchi bo'lsangiz
+
+[[mods]]
+modId="superheroes" # BU JUDA MUHIM: hamma papkalar nomi shu bilan bir xil bo'lishi shart
+version="1.0.0"
+displayName="Uzbek Superheroes"
+authors="Verfex" # Sizning nikneymingiz
+description='''
+O'zbek superqahramonlari olami! 
+Nano-kostyumlar, AVA sun'iy intellekti va milliy kuchlar bilan jihozlangan texnologik mod.
+'''
+# Logo faylingiz bo'lsa nomini yozing (masalan: "logo.png"), bo'lmasa o'chirib qo'ysangiz ham bo'ladi
+#logoFile="logo.png" 
+
+[[dependencies.superheroes]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.superheroes]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+# Photon, GeckoLib va boshqa kutubxonalar uchun bog'liqliklar (Ixtiyoriy)
+[[dependencies.superheroes]]
+    modId="geckolib"
+    mandatory=true
+    versionRange="[4.0,)"
+    ordering="AFTER"
+    side="BOTH"
