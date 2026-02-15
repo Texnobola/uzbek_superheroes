@@ -7,7 +7,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import uz.vavi.superheroes.Superheroes;
+import uz.vavi.superheroes.entity.custom.AVAEntity;
 
 /**
  * Entity registry for Uzbek Superheroes mod.
@@ -26,7 +28,16 @@ public class ModEntities {
         DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Superheroes.MOD_ID);
 
     // ==================== CUSTOM ENTITIES ====================
-    // Entity registrations will be added here in future phases
+
+    /**
+     * AVA Entity - AI companion drone for the player.
+     * A small flying entity with AI behaviors and animation support.
+     */
+    public static final RegistryObject<EntityType<AVAEntity>> AVA = ENTITIES.register("ava",
+        () -> EntityType.Builder.of(AVAEntity::new, MobCategory.CREATURE)
+            .sized(0.6f, 1.8f)
+            .build("ava")
+    );
 
     /**
      * Registers the entity registry with the mod event bus.
