@@ -8,6 +8,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
 import uz.vavi.superheroes.item.ModItems;
+import uz.vavi.superheroes.item.ModCreativeTabs;
+import uz.vavi.superheroes.block.ModBlocks;
 
 // Bu qator modingizni Minecraftga tanishtiradi.
 // "superheroes" so'zi mods.toml dagi modId bilan bir xil bo'lishi SHART!
@@ -29,7 +31,13 @@ public class Superheroes {
         // 2. Register all items with the mod event bus
         ModItems.ITEMS.register(modEventBus);
 
-        // 3. Modni ro'yxatdan o'tkazamiz
+        // 3. Register blocks with the mod event bus
+        ModBlocks.BLOCKS.register(modEventBus);
+
+        // 4. Register creative tabs with the mod event bus
+        ModCreativeTabs.CREATIVE_TABS.register(modEventBus);
+
+        // 5. Register mod event handlers
         MinecraftForge.EVENT_BUS.register(this);
 
 
