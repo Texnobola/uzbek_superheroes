@@ -32,7 +32,7 @@ public class ModEventHandlers {
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         // Register AVA entity attributes
         // This allows AVA to have health (20 = 10 hearts), movement speed, flying speed, etc.
-        event.put(ModEntities.AVA.get(), AVAEntity.createAttributes().build());
+        event.put(ModEntities.AVA.get(), AVAEntity.createAttributes());
     }
 
 }

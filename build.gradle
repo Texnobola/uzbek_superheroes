@@ -74,19 +74,19 @@ dependencies {
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.20.1:4.4.7")
 
     // Better Combat - Jang tizimi va kombolar uchun
-    implementation fg.deobf("curse.maven:better-combat-by-daedelus-639842:5065424")
+    // implementation fg.deobf("curse.maven:better-combat-by-daedelus-639842:5065424")
 
     // PlayerAnimator - O'yinchi harakatlari uchun
-    implementation fg.deobf("dev.kosmx.playeranim:player-animation-lib-forge:1.0.2-rc1+1.20.1")
+    // implementation fg.deobf("dev.kosmx.playeranim:player-animation-lib-forge:1.0.2-rc1+1.20.1")
 
     // Curios API - Aksessuar slotlari (Jetpack va Claws uchun)
-    implementation fg.deobf("curse.maven:curios-306627:4904155")
+    // implementation fg.deobf("curse.maven:curios-306627:4904155")
 
     // Kleiders Custom Renderer - Skin effektlari uchun
-    implementation fg.deobf("curse.maven:kleiders-custom-renderer-api-682065:5654821")
+    // implementation fg.deobf("curse.maven:kleiders-custom-renderer-api-682065:5654821")
 
     // Photon (VFX Engine) - Lazery va portlashlar uchun
-    implementation fg.deobf("curse.maven:photon-836154:5044498")
+    // implementation fg.deobf("curse.maven:photon-836154:5044498")
 }
 
 tasks.named('processResources', ProcessResources).configure {

@@ -34,7 +34,6 @@ public class ModCreativeTabs {
         CREATIVE_TABS.register("superheroes_tab", () ->
             CreativeModeTab.builder()
                 .title(Component.literal("Uzbek Superheroes"))
-                .withTabsBefore(Registries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTab.TAB_SEARCH))
                 .icon(() -> new ItemStack(ModItems.NANO_SUIT.get()))
                 .displayItems((features, output) -> {
                     // Automatically add all items from ModItems registry

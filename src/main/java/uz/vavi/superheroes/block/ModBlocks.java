@@ -3,7 +3,6 @@ package uz.vavi.superheroes.block;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,6 +11,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import uz.vavi.superheroes.Superheroes;
 import uz.vavi.superheroes.item.ModItems;
+import java.util.function.Supplier;
 
 /**
  * Block registry for Uzbek Superheroes mod.
@@ -38,9 +38,10 @@ public class ModBlocks {
      */
     public static final RegistryObject<Block> TECH_WORKBENCH =
         registerBlock("tech_workbench",
-            () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.IRON_BLOCK)
+            () -> new Block(BlockBehaviour.Properties.of()
                 .sound(SoundType.METAL)
                 .strength(5.0f)
+                .requiresCorrectToolForDrops()
             )
         );
 
@@ -54,7 +55,7 @@ public class ModBlocks {
      * @param block The block supplier
      * @return RegistryObject wrapping the registered block
      */
-    private static RegistryObject<Block> registerBlock(String name, net.minecraftforge.registries.DeferredRegister.DeferredSupplier<? extends Block> block) {
+    private static RegistryObject<Block> registerBlock(String name, Supplier<? extends Block> block) {
         RegistryObject<Block> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
